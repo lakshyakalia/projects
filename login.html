@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+	body{
+		margin: 0;
+	}
+	*{
+		margin: 0;
+	}
+	.form{
+		width: 40%;
+		padding: 20px;
+	}
+	.in{
+		padding: 10px;
+		color: white;
+	}
+
+
+
+		.main{
+			background-image: url("webbackground.png");
+			height: 100vh;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			background-repeat: no-repeat;
+		}
+		.h2{
+			padding: 30px;
+		}
+		.in a{
+			color: white;
+			text-decoration: none;
+		}
+		.in a:hover{
+			color: #64E468;
+		}
+
+	</style>
+</head>
+<body>
+<div class="main">
+	<h2 class="h2">LOGIN</h2><br>
+	<div class="form">
+		
+	    <form name="myform" method="get" onsubmit="return myval()" style="background-color: rgba(0,0,0,0.7);">
+	    	<br>
+	    	<div class="in">
+	    Username: <input type="text" name="uname" placeholder="Enter your Username" ><br><br>
+	    Password: <input type="Password" name="pwd" placeholder="Enter your Password" ><br><br>
+	    <h6><a href="#">forget password?</h6>		
+	    	<br><Br>
+	    	<input type="submit" value="submit" style="border-style: solid; background-color: red; color: white;"> &nbsp  <input type="reset" name="reset" style="border-style: solid; background-color: #44ad48; width=75%; height=42px; color:white;">
+		</div>
+		</form>
+		
+	
+	</div>
+	
+</div>
+<script type="text/javascript">
+	function myval(){
+		var value=document.forms["myform"]["uname"].value;
+var value1=document.forms["myform"]["pwd"].value;
+var flag=true;
+if(value=="")
+{
+alert("username cannot be empty");
+flag=false;	
+}
+if(value1=="")
+{
+	alert("password cannot be empty");
+	flag=false;
+}
+return flag;
+}
+</script>
+</body>
+</html>
